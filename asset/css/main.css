@@ -1,0 +1,553 @@
+#wrapper {
+    width: 100%;
+}
+
+.text-white {
+    color: white !important;
+}
+
+#header {
+    width: 100%;
+    height: 45px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+}
+
+.header__nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.header__nav-categorie {
+    height: 100%;
+}
+
+.header__nav-categorie--hover {
+    height: 100%;
+    position: relative;
+}
+
+.header__nav-categorie a,
+.header__nav-categorie .header__nav-categorie-heading {
+    display: flex;
+    max-width: 110px;
+    height: 100%;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    transition: color, background-color .5s linear;
+    gap: 4px;
+    cursor: pointer;
+}
+
+.header__nav-categorie a:hover,
+.header__nav-categorie .header__nav-categorie-heading:hover {
+    background-color: #999;
+    color: black;
+}
+
+.header__nav-categorie:nth-child(6) {
+    display: none;
+}
+
+.header__nav-categorie-menu-mobile {
+    display: none;
+}
+
+.header__nav-categorie-heading i {
+    font-size: 0.8rem;
+}
+
+.header__nav-categorie-list {
+    position: absolute;
+    list-style: none;
+    left: 0;
+    top: 100%;
+    width: 150px;
+    display: none;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    background-color: white;
+}
+
+.header__nav-categorie--hover:hover .header__nav-categorie-list {
+    display: block;
+}
+
+.header__nav-categorie-item {
+    width: 100%;
+}
+
+.header__nav-categorie-item-a {
+    display: block !important;
+    max-width: 100% !important;
+    color: black !important;
+}
+
+.header__nav-categorie-item-a:hover {
+    /* background-color: #999; */
+}
+
+.header__nav-categorie-search {
+    margin-left: auto;
+    width: 60px;
+    height: 100%;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header__nav-categorie-search:hover {
+    background-color: rgb(245, 43, 43);
+}
+
+.header__nav-categorie-search {
+    font-size: 1.1rem;
+    color: white;
+}
+
+
+#merch {
+    position: relative;
+    top: 45px;
+}
+
+.slider__img {
+    padding-top: 50%;
+    /* chính là 50% tỉ lệ theo chiều ngang của chính nó */
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.slider__content {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 32px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.slider__content-tilte {
+    padding: 15px 0;
+    font-size: 24px;
+}
+
+.slider__content-text {
+    font-size: 15px;
+    padding: 0 0 15px 0;
+}
+
+
+#content {}
+
+.content-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 64px 16px;
+}
+
+#content .section-heading,
+#content .section-sub-heading {
+    text-align: center;
+}
+
+#content .section-heading {
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    /* cho chữ cách xa nhau  */
+    margin: 10px 0;
+}
+
+#content .section-sub-heading {
+    font-size: 16px;
+    margin: 15px;
+    color: #999;
+    font-style: italic;
+}
+
+#content .about-text {
+    text-align: justify;
+    /* nó sắp đều nhau  */
+    font-size: 15px;
+    line-height: 1.4rem;
+    margin-top: 25px;
+}
+
+#content .members-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 48px;
+}
+
+#content .member-item {
+    width: calc(100% / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#content .member-name {
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+#content .member-img {
+    width: 60%;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.tour-section {
+    background-color: #000;
+}
+
+.tickets-list {
+    background-color: white;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    list-style: none;
+}
+
+.ticket-item {
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+}
+
+.slot-out {
+    background-color: #f44336;
+    color: white;
+    padding: 3px 4px;
+    margin-left: 16px;
+}
+
+.quantity {
+    background-color: #000;
+    border-radius: 50%;
+    float: right;
+    margin-top: -3px;
+    color: white;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.cards-list {
+    display: flex;
+    padding: 32px 8px;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+
+.card-item {
+    width: calc(100% / 3);
+    padding: 0 8px;
+    margin: 0 0 16px;
+}
+
+.card-item-img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    /* để cho img ko đẩy xuống 1 xíu  */
+}
+
+.card-item-img:hover {
+    filter: brightness(0.7);
+}
+
+.card-item-wrap {
+    background-color: white;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-item-heading {
+    font-size: 15px;
+    font-weight: 700;
+    margin: 15px 0;
+
+}
+
+.card-item-sub-heading {
+    margin: 0 0 15px;
+    font-size: 15px;
+    color: #999;
+}
+
+.card-item-content {
+    margin: 0 0 15px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.card-item-btn {
+    padding: 8px 16px;
+    margin: 0 0 16px;
+    background-color: #000;
+    color: white;
+    width: 108px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+.card-item-btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+
+
+/* modal  */
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.open {
+    display: flex;
+
+}
+
+.modal.close {
+    animation: removeModal 1s ease-in-out;
+}
+
+.modal-container {
+    background-color: white;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    animation: showModal 1s ease-in-out;
+}
+
+.modal-container-close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: white;
+    padding: 16px;
+    border-radius: none;
+    border: 0;
+    background-color: transparent;
+    font-size: 15px;
+}
+
+.modal-container-close-btn:hover {
+    background-color: #999;
+    color: #000;
+}
+
+.model-header {
+    height: 130px;
+    padding: 32px 16px;
+    background-color: #009688;
+}
+
+.model-header h2 {
+    display: flex;
+    width: 100%;
+    margin: 12px 0;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 500;
+    color: white;
+}
+
+.model-header i {
+    margin-right: 16px;
+}
+
+.modal-body {
+    padding: 0 16px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.modal-body-label {
+    margin: 15px 0;
+    font-size: 15px;
+    color: #000;
+    width: 100%;
+}
+
+.modal-body-input {
+    font-size: 15px;
+    color: #999;
+    border: 1px solid #ddd;
+    width: 100%;
+    padding: 8px;
+    height: 40px;
+}
+
+.modal-body-btn {
+    margin: 16px 0;
+    padding: 16px;
+    font-size: 16px;
+    color: white;
+    background-color: #009688;
+    width: 100%;
+    border: none;
+}
+
+.modal-body-btn:hover {
+    background-color: #999;
+    color: #000;
+}
+
+.modal-body-footer {
+    width: 100%;
+}
+
+.modal-body-footer div {
+    margin: 16px 0 32px auto;
+    font-size: 15px;
+    text-align: right;
+}
+
+.modal-body-footer div a {
+    color: #2196F3;
+}
+
+.content-section-wrap {
+    padding: 32px 0;
+    display: flex;
+}
+
+.content-section-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 50%;
+    margin-bottom: 16px;
+}
+
+.content-section-info-location {
+    font-size: 20px;
+}
+
+.content-section-info-location i {
+    margin-right: 12px;
+}
+
+.content-section-form {
+    width: 50%;
+}
+
+.content-section-form-wrap {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 8px;
+}
+
+.content-section-form-wrap-body {
+    width: 50%;
+}
+
+.content-section-form-wrap-input {
+    padding: 8px;
+    width: 100%;
+    height: 40px;
+
+}
+
+.content-section-form-message {
+    width: 100%;
+    height: 40px;
+    padding: 8px;
+}
+
+.content-section-form-wrap-btn {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.content-section-form-btn {
+    margin: 16px 0;
+    background-color: #000;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+}
+
+.content-section-form-btn:hover {
+    cursor: pointer;
+    background-color: #ddd;
+    color: #000
+}
+
+.content-location {
+    padding-top: 50%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    filter: grayscale(50%)
+}
+
+#footer {
+    padding: 64px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.footer-icon-wrap {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    font-size: 24px;
+    color: #757575;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 15px 0;
+    font-size: 15px;
+    color: #757575;
+    gap: 2px;
+}
+
+.footer-content a {
+    display: block;
+    color: #757575;
+}
