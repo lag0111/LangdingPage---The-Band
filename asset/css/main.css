@@ -118,6 +118,7 @@
 #merch {
     position: relative;
     top: 45px;
+    overflow: hidden;
 }
 
 .slider__img {

@@ -245,7 +245,6 @@
             }
         ]
         
-        const merch = document.querySelector('.merch')
 
         let curentIndex = 0;
 
@@ -265,9 +264,10 @@
         setInterval(() => {
             curentIndex = (curentIndex + 1) % sliderItems.length;
             showSlider(curentIndex)
-            merch.style.animation = 'none'
-            merch.offsetWidth //forcing reflow ép trình duyệt tính toán lại kích thước để thực hiện lại animation
-            merch.style.animation = 'sliderShowOn 0.5s ease-in-out'
+            sliderImg.style.animation = 'none'
+            sliderImg.offsetWidth //forcing reflow ép trình duyệt tính toán lại kích thước để thực hiện lại animation
+            sliderImg.style.animation = 'sliderShowOn 0.5s ease-in-out'
+            
         }, 4000);
         clearInterval(()=>{
 
