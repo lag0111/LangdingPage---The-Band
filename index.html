@@ -26,9 +26,12 @@
                         <i class="ti-angle-down"></i>
                     </div>
                     <ul class="header__nav-categorie-list">
-                        <li class="header__nav-categorie-item"><a class="header__nav-categorie-item-a" href="#">Merchandise</a></li>
-                        <li class="header__nav-categorie-item"><a class="header__nav-categorie-item-a" href="#">Extras</a></li>
-                        <li class="header__nav-categorie-item"><a class="header__nav-categorie-item-a" href="#">Media</a></li>
+                        <li class="header__nav-categorie-item"><a class="header__nav-categorie-item-a"
+                                href="#">Merchandise</a></li>
+                        <li class="header__nav-categorie-item"><a class="header__nav-categorie-item-a"
+                                href="#">Extras</a></li>
+                        <li class="header__nav-categorie-item"><a class="header__nav-categorie-item-a"
+                                href="#">Media</a></li>
                     </ul>
                 </div>
                 <div class="header__nav-categorie"><a href="#merch">MERCH</a></div>
@@ -214,7 +217,7 @@
         </div>
     </div>
 
-    
+
     <script>
         const buyTickets = document.querySelectorAll('.buy-ticket-js')
         const closeModal = document.querySelector('.close-modal-js')
@@ -223,6 +226,53 @@
         var header = document.getElementById('header')
         const mobileMenu = document.querySelector('.header__nav-categorie-menu-mobile')
         const menuItems = document.querySelectorAll(`#nav div a[href*="#"]`)
+
+        const sliderItems = [
+            {
+                heading: 'Chicago',
+                content: "Thank you, Chicago - A night we won't forget.",
+                img: "https://www.w3schools.com/w3images/chicago.jpg"
+            },
+            {
+                heading: 'New York',
+                content: "The atmosphere in New York is lorem ipsum.",
+                img: "https://www.w3schools.com/w3images/ny.jpg"
+            },
+            {
+                heading: 'Los Angeles',
+                content: "We had the best time playing at Venice Beach!",
+                img: "https://www.w3schools.com/w3images/la.jpg"
+            }
+        ]
+        
+        const merch = document.getElementById('merch')
+
+        let curentIndex = 0;
+
+        const sliderImg = document.querySelector('.slider__img')
+        const sliderTitle = document.querySelector('.slider__content-tilte')
+        const sliderText = document.querySelector('.slider__content-text')
+
+        function showSlider(index) {
+            const item = sliderItems[index]
+            sliderImg.style.backgroundImage = `url(${item.img})`
+            sliderTitle.textContent = item.heading
+            sliderText.textContent = item.content
+        }
+
+        showSlider(curentIndex)
+
+        setInterval(() => {
+            curentIndex = (curentIndex + 1) % sliderItems.length;
+            showSlider(curentIndex)
+            merch.style.animation = 'none'
+            merch.offsetWidth //forcing reflow ép trình duyệt tính toán lại kích thước để thực hiện lại animation
+            merch.style.animation = 'sliderShowOn 0.5s ease-in-out'
+        }, 4000);
+        clearInterval(()=>{
+
+        })
+
 
         const menuItemsNumber = document.querySelector('.header__nav-categorie')
 
